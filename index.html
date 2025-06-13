@@ -15,44 +15,50 @@
 
         <section class="container__entrada">
             <div class="container__valores container__status">
-                <input type="number" name="destreza" id="destreza" min="0">
-                <input type="number" name="sorte" id="sorte" min="0">
-                <input type="number" name="nivelBase" id="nivel-base" min="0" max="175">
+                <label>Destreza<input type="number" name="destreza" id="destreza" min="0"></label>
+                <label>Sorte<input type="number" name="sorte" id="sorte" min="0"></label>
+                <label>Nivel Base<input type="number" name="nivelBase" id="nivel-base" min="0" max="175"></label>
             </div>
 
             <div class="container__valores container__runa__recipiente">
-                <label><input type="radio" class="radio__runa__recipiente" value="4">Runa Bruta Comum</label>
-                <label><input type="radio" class="radio__runa__recipiente" value="8">Runa Bruta Forte</label>
-                <label><input type="radio" class="radio__runa__recipiente" value="15">Runa Bruta Rara</label>
-                <label><input type="radio" class="radio__runa__recipiente" value="30">Runa Bruta Antiga</label>
-                <label><input type="radio" class="radio__runa__recipiente" value="60">Runa Bruta Mística</label>
+                <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="4" checked>Runa Bruta Comum</label>
+                <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="8">Runa Bruta Forte</label>
+                <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="15">Runa Bruta Rara</label>
+                <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="30">Runa Bruta Antiga</label>
+                <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="60">Runa Bruta Mística</label>
             </div>
 
             <div class="container__valores container__runa__craftada">
-                <label><input type="radio" class="radio__runa__craftada" value="27">Runa Thurisaz</label>
-                <label><input type="radio" class="radio__runa__craftada" value="24">Runa Isa</label>
-                <label><input type="radio" class="radio__runa__craftada" value="26">Runa Wyrd</label>
-                <label><input type="radio" class="radio__runa__craftada" value="33">Runa Hagalaz</label>
-                <label><input type="radio" class="radio__runa__craftada" value="35">Runa Othila</label>
-                <label><input type="radio" class="radio__runa__craftada" value="27">Runa Uruz</label>
-                <label><input type="radio" class="radio__runa__craftada" value="39">Runa Raido</label>
-                <label><input type="radio" class="radio__runa__craftada" value="31">Runa Nauthiz</label>
-                <label><input type="radio" class="radio__runa__craftada" value="28">Runa Berkana</label>
-                <label><input type="radio" class="radio__runa__craftada" value="30">Runa Luxanima</label>
+                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="27" checked>Runa Thurisaz</label>
+                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="24">Runa Isa</label>
+                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="26">Runa Wyrd</label>
+                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="33">Runa Hagalaz</label>
+                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="35">Runa Othila</label>
+                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="27">Runa Uruz</label>
+                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="39">Runa Raido</label>
+                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="31">Runa Nauthiz</label>
+                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="28">Runa Berkana</label>
+                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="30">Runa Luxanima</label>
             </div>
 
-            <button onclick="">Enviar</button>
+            <button onclick="calcularPorcentagem()">Enviar</button>
         </section>
         
         <section class="container__saida">
             <div>
                 <label>Chance de craft:</label>
-                <input type="number" name="chanceCraft" id="chance-craft">
+                <div>
+                    <input type="" name="chanceCraft" id="chance-craft" readonly>
+                    <span>%</span>
+                </div>
             </div>
 
             <div>
                 <label>Custo de zeny para cada tentativa de craft:</label>
-                <input type="number" name="valorZeny" id="valor-zeny">
+                <div>
+                    <input type="number" name="valorZeny" id="valor-zeny" readonly>
+                    <span>Zeny</span>
+                </div>
             </div>
         </section>
 
