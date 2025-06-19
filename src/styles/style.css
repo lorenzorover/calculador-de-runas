@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 65px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    justify-items: center;
+}
+
+.container__entrada {
+    width: 50rem;
+    height: auto;
+    background-color: aqua;
+    
+}
+
+.label__radios {
+    cursor: pointer;
+}
+
+.label__radios:hover img {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+  filter: brightness(1.2);
+}
+
+.radio__runa__craftada:checked + .img__runa__craftada {
+  filter: brightness(1.25);
+  transform: scale(1.2);
+}
+
+.radio__runa__craftada {
+    appearance: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}

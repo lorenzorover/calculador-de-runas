@@ -5,50 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Runas</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <link rel='stylesheet' type='text/css' media='screen' href='./src/styles/style.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <main>
-        <section>
-            <h1>Calculadora de Runas</h1>
-        </section>
+        <section class="container__entrada d-flex flex-column p-5">
+            <h1 class="">Calculadora de Runas</h1>
 
-        <section class="container__entrada">
-            <div class="container__valores container__status">
-                <label>Destreza<input type="number" name="destreza" id="destreza" min="0"></label>
-                <label>Sorte<input type="number" name="sorte" id="sorte" min="0"></label>
-                <label>Nivel Base<input type="number" name="nivelBase" id="nivel-base" min="0" max="175"></label>
-            </div>
+            <div class="d-flex flex-row">
+                <div class="container__valores container__status">
+                    <label>Destreza<input type="number" name="destreza" id="destreza" min="0"></label>
+                    <label>Sorte<input type="number" name="sorte" id="sorte" min="0"></label>
+                    <label>Nível Base<input type="number" name="nivelBase" id="nivel-base"></label>
+                </div>
 
-            <div class="container__valores container__runa__recipiente">
-                <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="4" data-custo="1000" checked>Runa Bruta Comum</label>
-                <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="8" data-custo="2500">Runa Bruta Forte</label>
-                <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="15" data-custo="7500">Runa Bruta Rara</label>
-                <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="30" data-custo="18000">Runa Bruta Antiga</label>
-                <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="60" data-custo="50000">Runa Bruta Mística</label>
-            </div>
+                <div class="container__valores container__runa__recipiente">
+                    <h1>Runa Recipiente</h1>
+                    <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="4" data-custo="1000" checked>Comum</label>
+                    <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="8" data-custo="2500">Forte</label>
+                    <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="15" data-custo="7500">Rara</label>
+                    <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="30" data-custo="18000">Antiga</label>
+                    <label><input type="radio" name="runa-recipiente" class="radio__runa__recipiente" value="60" data-custo="50000">Mística</label>
+                </div>
 
-            <div class="container__valores container__runa__craftada">
-                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="1" data-chance="27" data-numeroMaterial="2" checked>Runa Thurisaz</label>
-                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="2" data-chance="24" data-numeroMaterial="1">Runa Isa</label>
-                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="3" data-chance="26" data-numeroMaterial="3">Runa Wyrd</label>
-                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="4" data-chance="33" data-numeroMaterial="2">Runa Hagalaz</label>
-                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="5" data-chance="35" data-numeroMaterial="2">Runa Othila</label>
-                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="6" data-chance="27" data-numeroMaterial="2">Runa Uruz</label>
-                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="7" data-chance="39" data-numeroMaterial="2">Runa Raido</label>
-                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="8" data-chance="31" data-numeroMaterial="3">Runa Nauthiz</label>
-                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="9" data-chance="28" data-numeroMaterial="1">Runa Berkana</label>
-                <label><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="10" data-chance="30" data-numeroMaterial="2">Runa Luxanima</label>
+                <div class="container__valores container__runa__craftada">
+                    <h1>Runa Craftada</h1>
+                    <label class="label__radios"><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="1" data-chance="27" data-numeroMaterial="2" checked>
+                        Thurisaz
+                        <img src="./src/assets/runa-craftada/runa-thurisaz.svg" class="img__runa__craftada" alt="Imagem Runa Thurisaz"></label>
+                    <label class="label__radios"><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="2" data-chance="24" data-numeroMaterial="1">
+                        Isa
+                        <img src="./src/assets/runa-craftada/runa-isa.svg" class="img__runa__craftada" alt="Imagem Runa Isa"></label>
+                    <label class="label__radios"><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="3" data-chance="26" data-numeroMaterial="3">
+                        Wyrd
+                        <img src="./src/assets/runa-craftada/runa-wyrd.svg" class="img__runa__craftada" alt="Imagem Runa Wyrd"></label>
+                    <label class="label__radios"><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="4" data-chance="33" data-numeroMaterial="2">
+                        Hagalaz
+                        <img src="./src/assets/runa-craftada/runa-hagalaz.svg" class="img__runa__craftada" alt="Imagem Runa Hagalaz"></label>
+                    <label class="label__radios"><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="5" data-chance="35" data-numeroMaterial="2">
+                        Othila
+                        <img src="./src/assets/runa-craftada/runa-othila.svg" class="img__runa__craftada" alt="Imagem Runa Othila"></label>
+                    <label class="label__radios"><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="6" data-chance="27" data-numeroMaterial="2">
+                        Uruz
+                        <img src="./src/assets/runa-craftada/runa-uruz.svg" class="img__runa__craftada" alt="Imagem Runa Uruz"></label>
+                    <label class="label__radios"><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="7" data-chance="39" data-numeroMaterial="2">
+                        Raido
+                        <img src="./src/assets/runa-craftada/runa-raido.svg" class="img__runa__craftada" alt="Imagem Runa Raido"></label>
+                    <label class="label__radios"><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="8" data-chance="31" data-numeroMaterial="3">
+                        Nauthiz
+                        <img src="./src/assets/runa-craftada/runa-nauthiz.svg" class="img__runa__craftada" alt="Imagem Runa Nauthiz"></label>
+                    <label class="label__radios"><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="9" data-chance="28" data-numeroMaterial="1">
+                        Berkana
+                        <img src="./src/assets/runa-craftada/runa-berkana.svg" class="img__runa__craftada" alt="Imagem Runa Berkana"></label>
+                    <label class="label__radios"><input type="radio" name="runa-craftada" class="radio__runa__craftada" value="10" data-chance="30" data-numeroMaterial="2">
+                        Luxanima
+                        <img src="./src/assets/runa-craftada/runa-luxanima.svg" class="img__runa__craftada" alt="Imagem Runa Luxanima"></label>
+                </div>
             </div>
 
             <button onclick="calcularPorcentagem()">Enviar</button>
         </section>
+            
+        
         
         <section class="container__saida">
             <div>
                 <label>Chance de craft:</label>
                 <div>
-                    <input type="" name="chanceCraft" id="chance-craft" readonly>
+                    <input type="number" name="chanceCraft" id="chance-craft" readonly>
                     <span>%</span>
                 </div>
             </div>
@@ -64,5 +89,9 @@
 
     </main>
 <script src="script.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
